@@ -23,7 +23,7 @@ router.route('/:thoughtId')
 
 
 // /api/comments/<userId>/<thoughtId>
-router.route('/:thoughtId/:userId')
+router.route('/:thoughtId/user/:userId')
     .delete(removeThought)
 
 

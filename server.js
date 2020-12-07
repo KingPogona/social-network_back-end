@@ -16,6 +16,12 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkBa
     useUnifiedTopology: true
 });
 
+
+// mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/socialNetworkBackEnd',function(){
+//     /* Drop the DB */
+//     mongoose.connection.db.dropDatabase();
+// });
+
 // Use this to log mongo queries being executed!
 mongoose.set('debug', true);
 

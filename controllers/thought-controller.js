@@ -19,7 +19,7 @@ const thoughtsController = {
 
     // get one thought by id
     getThoughtsById({ params }, res) {
-        Thought.findOne({ _id: params.thoughtsId })
+        Thought.findOne({ _id: params.thoughtId })
             .select('-__v')
             .then(dbUserData => {
                 if (!dbUserData) {
@@ -57,7 +57,7 @@ const thoughtsController = {
 
     // update thought by id
     updateThought({ params, body }, res) {
-        Thought.findOneAndUpdate({ _id: params.thoughtsId }, body, { new: true })
+        Thought.findOneAndUpdate({ _id: params.thoughtId }, body, { new: true })
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
                     res.status(404).json({ message: 'No thought found with this id!' });
